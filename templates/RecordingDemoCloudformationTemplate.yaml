@@ -25,7 +25,7 @@ Parameters:
   EcsClusterName:
     Type: String
     Description: 'Specifies the ECS Cluster Name with which the resources would be associated'
-    Default: 'RecordingDemoEC2Cluster'
+    Default: 'C2CRecordingEC2Cluster'
   ECRDockerImageArn:
     Type: String
     Description: 'ARN of the docker image stored in ECR along with the tag'
@@ -53,7 +53,7 @@ Parameters:
     ConstraintDescription: Please choose a valid instance type.
   RecordingDemoLogGroupName:
     Type: String
-    Default: RecordingDemoLogGroup
+    Default: C2CRecordingLogGroup
   EnvironmentName:
     Description: An environment name that is prefixed to resource names
     Type: String
