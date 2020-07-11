@@ -140,10 +140,14 @@ function startRecording(event, context, callback, meetingUrl) {
         else {
             console.log(data);  // successful response
             response.statusCode = 200;
+            response.headers = {
+                'Access-Control-Allow-Origin': '*',
+            };
             response.body = JSON.stringify(
                 {
                     taskId: (data.tasks.length && data.tasks[0].taskArn) ? data.tasks[0].taskArn : data,
-                    fileKey
+                    fileKey,
+                    status: 'success',
                 },
                 null,
                 ' '
